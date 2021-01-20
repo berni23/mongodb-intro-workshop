@@ -110,8 +110,6 @@ async function findUserByEmailAndProjectFields() {
  * Use lean and exec on the query
  */
 async function getUserEmails() {
-
-
   const users = await db.User.find({}).select({
       _id: 0,
       email: 1
@@ -197,7 +195,7 @@ async function getUpdatedEmail() {
   }).lean().exec();
 
   // Uncomment this line after finishing the DB update query
-  // user = await user.toObject();
+  //user = await user.toObject();
 
   return user;
 }
